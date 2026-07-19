@@ -1,0 +1,19 @@
+:root {
+  --paper: #f8faf7;
+  --ink: #15332e;
+  --body: #435d58;
+  --muted: #687c77;
+  --line: #dfe8e4;
+  --green-050: #edf5f1;
+  --green-500: #4f8e7f;
+  --green-700: #1f6659;
+  --green-800: #174f46;
+  --green-900: #103a33;
+  --sand-050: #f5f1e8;
+  --sand-200: #e8d6ad;
+  --sand-500: #b79258;
+  --focus: #d29a35;
+  --radius-lg: 22px;
+  --shadow-sm: 0 8px 24px rgb(21 51 46 / 6%);
+  --shadow-lg: 0 20px 54px rgb(21 51 46 / 14%);
+}
