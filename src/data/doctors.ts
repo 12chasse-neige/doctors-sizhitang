@@ -1,4 +1,4 @@
-export type ClinicName = '金马诊所' | '惠民诊所' | '四之堂诊所'
+export type ClinicName = '四之堂诊所' | '惠民诊所' | '金马诊所'
 
 export interface ClinicSchedule {
   clinic: ClinicName
@@ -192,7 +192,7 @@ export const doctors: Doctor[] = [
   },
 ]
 
-export const clinics: ClinicName[] = ['金马诊所', '惠民诊所', '四之堂诊所']
+export const clinics: ClinicName[] = ['四之堂诊所', '惠民诊所', '金马诊所']
 
 // Clinic contact details are normalized from docs/materials/address.md.
 export const clinicInfo: Record<ClinicName, ClinicInfo> = {
