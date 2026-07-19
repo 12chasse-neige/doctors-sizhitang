@@ -15,9 +15,11 @@
 
 - `docs/materials/doctors.md`：14 位医生的姓名、职称、简介和坐诊安排。
 - `docs/materials/address.md`：金马、惠民、四之堂三处诊所的地址与联系电话。
+- `docs/materials/introduction.md`：四之堂自1914年创立以来的企业沿革与字号寓意。
 - `docs/materials/portraits/`：与医生姓名对应的肖像。
 - `docs/materials/appearances/`：四之堂诊所外观照片。
 - `docs/materials/portraits/duty/`：原始排班截图，仅作为归档参考。
+- `public/logo.png`：用户提供的四之堂原始标志；网页使用裁切优化后的副本。
 
 网页使用的规范化数据位于 `src/data/doctors.ts`，图片副本位于 `src/assets/`。原始材料不会被构建流程修改。
 

@@ -1,25 +1,48 @@
 <script setup lang="ts">
 import appearance2 from '../assets/appearance2.jpg'
 import appearance3 from '../assets/appearance3.jpg'
+import { enterprise } from '../data/enterprise'
 </script>
 
 <template>
   <section id="about" class="section about-section" aria-labelledby="about-title">
-    <div class="page-shell about-grid">
-      <div class="about-copy">
-        <p class="eyebrow">环境一览</p>
-        <h2 id="about-title">四之堂诊所</h2>
-        <p>本页集中展示四之堂相关医生的简介、擅长领域，以及四之堂、惠民和金马三处诊所的坐诊信息。</p>
-        <p class="about-note">三处诊所的地址和联系电话已列于坐诊安排中；材料未提供线上预约入口。</p>
+    <div class="page-shell">
+      <div class="section-heading about-heading">
+        <div>
+          <p class="eyebrow">企业介绍</p>
+          <h2 id="about-title">百年四之堂</h2>
+        </div>
+        <p>{{ enterprise.name }}，前身四之堂始创于{{ enterprise.founded }}。</p>
       </div>
-      <div class="about-gallery">
-        <figure>
-          <img :src="appearance3" alt="四之堂诊所建筑外观" loading="lazy" />
-        </figure>
-        <figure>
-          <img :src="appearance2" alt="四之堂诊所入口与门匾" loading="lazy" />
-        </figure>
+
+      <div class="about-grid">
+        <article class="about-copy">
+          <p class="heritage-quote">
+            <span>“四之”堂名寓意</span>
+            <strong>{{ enterprise.nameMeaning }}</strong>
+          </p>
+          <p v-for="paragraph in enterprise.paragraphs" :key="paragraph">{{ paragraph }}</p>
+        </article>
+
+        <div class="about-gallery">
+          <figure>
+            <img :src="appearance3" alt="四之堂医馆建筑外观" loading="lazy" />
+          </figure>
+          <figure>
+            <img :src="appearance2" alt="四之堂医馆入口与门匾" loading="lazy" />
+          </figure>
+        </div>
       </div>
+
+      <ol class="milestone-list" aria-label="四之堂发展历程">
+        <li v-for="milestone in enterprise.milestones" :key="milestone.year">
+          <span>{{ milestone.year }}</span>
+          <div>
+            <h3>{{ milestone.title }}</h3>
+            <p>{{ milestone.description }}</p>
+          </div>
+        </li>
+      </ol>
     </div>
   </section>
 </template>

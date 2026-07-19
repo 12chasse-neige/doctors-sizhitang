@@ -1,8 +1,12 @@
+<script setup lang="ts">
+import logo from '../assets/sizhitang-logo.png'
+</script>
+
 <template>
   <footer class="site-footer">
     <div class="page-shell site-footer__inner">
       <div class="brand brand--footer">
-        <span class="brand__mark" aria-hidden="true">四</span>
+        <img class="brand__logo" :src="logo" alt="" width="44" height="51" />
         <span class="brand__text"><strong>四之堂</strong><small>医生信息</small></span>
       </div>
       <div class="site-footer__copy">
