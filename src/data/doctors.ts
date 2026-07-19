@@ -54,7 +54,7 @@ export const doctors: Doctor[] = [
     name: '仲李国',
     title: '主治中医师',
     portrait: portrait('zhong-liguo.jpg'),
-    specialties: ['针灸', '推拿', '颈肩腰腿痛', '亚健康调理'],
+    specialties: ['针灸', '颈肩腰腿痛', '亚健康调理'],
     biography: '2006 年毕业于北京中医药大学，现于海宁市丁桥镇卫生院中医科工作。擅长运用针灸、推拿和中药治疗颈肩腰腿痛，并开展亚健康调理。',
     schedules: [{ clinic: '惠民诊所', times: ['每周一、周六 16:30–20:30'] }],
   },
@@ -120,7 +120,12 @@ export const doctors: Doctor[] = [
     portrait: portrait('guo-tingyin.jpg'),
     specialties: ['中西医结合', '内外妇儿常见病', '颈肩腰腿痛', '面瘫与带状疱疹'],
     biography: '1981 年至 1984 年拜师学习中医，之后在部队学习西医知识，并在吉林市卫生学校中医专业系统学习三年。2011 年至 2024 年开办个体诊所，积累了中医及中西医结合诊疗经验，熟悉内科、外科、妇科、儿科常见病和多发病，尤其擅长颈椎病、腰椎间盘突出、滑膜炎、面瘫、痔疮、带状疱疹和肾结石等疾病的治疗。',
-    schedules: [{ clinic: '四之堂诊所', times: ['每周三、周四 08:00–21:00', '每周一、周五 12:30–21:00'] }],
+    schedules: [
+      {
+        clinic: '四之堂诊所',
+        times: ['每周二 08:00–16:30', '每周三、周四 08:00–21:00', '每周一、周五 12:30–21:00'],
+      },
+    ],
   },
   {
     id: 'yao-caihua',
@@ -199,11 +204,11 @@ export const clinicInfo: Record<ClinicName, ClinicInfo> = {
   惠民诊所: {
     name: '惠民诊所',
     address: '海宁市马桥街道长平路205号-2',
-    telephone: '87231978',
+    telephone: '0573-87231978',
   },
   四之堂诊所: {
     name: '四之堂诊所',
     address: '海宁市马桥街道马桥路432号桐木商业街13幢102室、103室、104室、105室',
-    telephone: '87261321',
+    telephone: '0573-87261321',
   },
 }
