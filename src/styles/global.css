@@ -542,6 +542,54 @@ img {
   font-size: 26px;
 }
 
+.clinic-card__contact {
+  display: grid;
+  gap: 12px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgb(255 255 255 / 14%);
+  font-style: normal;
+}
+
+.clinic-card__contact > div {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 8px;
+  align-items: start;
+}
+
+.clinic-card__contact-label {
+  color: rgb(255 255 255 / 48%);
+  font-size: 12px;
+  letter-spacing: .12em;
+}
+
+.clinic-card__contact p,
+.clinic-card__contact a {
+  margin: 0;
+  color: rgb(255 255 255 / 82%);
+  font-size: 13px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+.clinic-card__contact a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: flex-start;
+  gap: 7px;
+  margin: -10px 0;
+  padding: 10px 0;
+  color: var(--sand-200);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgb(232 214 173 / 38%);
+  text-underline-offset: 4px;
+}
+
+.clinic-card__contact a:hover {
+  text-decoration-color: currentColor;
+}
+
 .clinic-card ul {
   margin: 0;
   padding: 0;

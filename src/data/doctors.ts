@@ -15,6 +15,12 @@ export interface Doctor {
   schedules: ClinicSchedule[]
 }
 
+export interface ClinicInfo {
+  name: ClinicName
+  address: string
+  telephone: string
+}
+
 const portraitModules = import.meta.glob('../assets/portraits/*.jpg', {
   eager: true,
   import: 'default',
@@ -182,3 +188,22 @@ export const doctors: Doctor[] = [
 ]
 
 export const clinics: ClinicName[] = ['金马诊所', '惠民诊所', '四之堂诊所']
+
+// Clinic contact details are normalized from docs/materials/address.md.
+export const clinicInfo: Record<ClinicName, ClinicInfo> = {
+  金马诊所: {
+    name: '金马诊所',
+    address: '海宁市海洲街道南苑路193号',
+    telephone: '15381265063',
+  },
+  惠民诊所: {
+    name: '惠民诊所',
+    address: '海宁市马桥街道长平路205号-2',
+    telephone: '87231978',
+  },
+  四之堂诊所: {
+    name: '四之堂诊所',
+    address: '海宁市马桥街道马桥路432号桐木商业街13幢102室、103室、104室、105室',
+    telephone: '87261321',
+  },
+}

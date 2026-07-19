@@ -14,6 +14,7 @@
 `docs/materials/` 是原始资料的唯一事实来源：
 
 - `docs/materials/doctors.md`：14 位医生的姓名、职称、简介和坐诊安排。
+- `docs/materials/address.md`：金马、惠民、四之堂三处诊所的地址与联系电话。
 - `docs/materials/portraits/`：与医生姓名对应的肖像。
 - `docs/materials/appearances/`：四之堂诊所外观照片。
 - `docs/materials/portraits/duty/`：原始排班截图，仅作为归档参考。
@@ -83,4 +84,4 @@ npm run preview
 
 ## 内容边界
 
-现有材料没有提供诊所地址、电话、二维码或线上预约链接，网站因此不展示这些内容。坐诊安排按 `doctors.md` 呈现；实际安排如有调整，以诊所或医院官方通知为准。
+诊所地址与电话按 `address.md` 呈现，坐诊安排按 `doctors.md` 呈现。现有材料没有提供二维码或线上预约链接，因此网站不展示这些内容；实际安排如有调整，以诊所或医院官方通知为准。

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { clinics, doctors } from '../data/doctors'
+import { clinicInfo, clinics, doctors } from '../data/doctors'
 
 function schedulesFor(clinic: (typeof clinics)[number]) {
   return doctors.flatMap((doctor) =>
@@ -27,6 +27,19 @@ function schedulesFor(clinic: (typeof clinics)[number]) {
             <span aria-hidden="true">0{{ index + 1 }}</span>
             <h3>{{ clinic }}</h3>
           </div>
+          <address class="clinic-card__contact">
+            <div>
+              <span class="clinic-card__contact-label">地址</span>
+              <p>{{ clinicInfo[clinic].address }}</p>
+            </div>
+            <div>
+              <span class="clinic-card__contact-label">电话</span>
+              <a :href="`tel:${clinicInfo[clinic].telephone}`" :aria-label="`拨打${clinic}电话 ${clinicInfo[clinic].telephone}`">
+                {{ clinicInfo[clinic].telephone }}
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </address>
           <ul>
             <li v-for="entry in schedulesFor(clinic)" :key="entry.doctor.id">
               <a :href="`#${entry.doctor.id}`">{{ entry.doctor.name }}</a>
