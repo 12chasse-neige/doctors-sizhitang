@@ -38,6 +38,15 @@ function portrait(filename: string): string {
 // All factual content below is normalized from docs/materials/doctors.md.
 export const doctors: Doctor[] = [
   {
+    id: 'yu-guoying',
+    name: '于国英',
+    title: '主治中医师',
+    portrait: portrait('yu-guoying.jpg'),
+    specialties: ['心脑血管疾病', '肝胆脾胃疾病', '五脏六腑调理'],
+    biography: '毕业于嘉兴卫校（嘉兴医学院前身），从事临床中医内科工作三十余年，积累了较丰富的临床经验。擅长心脑血管、肝胆脾胃方面疾病的治疗，以及人体五脏六腑的调理。',
+    schedules: [{ clinic: '金马诊所', times: ['每周四 08:00–11:30'] }],
+  },
+  {
     id: 'he-ruihua',
     name: '何瑞华',
     title: '副主任中医师',
